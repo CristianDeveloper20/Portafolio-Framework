@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
   // Asegúrate de que el prefijo esté bien configurado para GitHub Pages
-  base: '/portafolio-framework/',
+  publicPath: '/portafolio-framework/',
   plugins: [vue()],
   resolve: {
     alias: {
