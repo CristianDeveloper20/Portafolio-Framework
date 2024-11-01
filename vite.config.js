@@ -1,9 +1,9 @@
-import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { fileURLToPath, URL } from 'node:url';
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
-  base: '/home',  // Especifica el nombre de tu repositorio como ruta base
+  base: '/portafolio-framework/',
   plugins: [vue()],
   resolve: {
     alias: {
@@ -20,4 +20,4 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 1000
   }
-})
+});
