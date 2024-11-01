@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "18"  # Cambia a la versión de Node.js que usas en tu proyecto
+  - "16"  # Cambia a la versión de Node.js que usas en tu proyecto
 
 # Solo ejecuta el build en la rama main cuando hay un push
 branches:
