@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
+  base: '/portafolio-framework/',  // Especifica el nombre de tu repositorio como ruta base
   plugins: [vue()],
   resolve: {
     alias: {
@@ -19,5 +20,4 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 1000
   }
-
 })
