@@ -1,7 +1,7 @@
 <template>
 	<div class="header">
 		<div class="logo">
-			<img class="header-logo" src="/portafolio-framework/Foto perfil.jpeg" @click="goRedirectToHome"
+			<img class="header-logo" src="/Foto perfil.jpeg" @click="goRedirectToHome"
 				alt="logo" />
 		</div>
 		<nav class="nav-menu">
