@@ -5,10 +5,10 @@
 				alt="logo" />
 		</div>
 		<nav class="nav-menu">
-			<router-link to="/portafolio-framework/home" class="menu-link">Inicio</router-link>
-			<router-link to="/portafolio-framework/about" class="menu-link">Sobre Mí</router-link>
-			<router-link to="/portafolio-framework/projects" class="menu-link">Proyectos</router-link>
-			<router-link to="/portafolio-framework/contact" class="menu-link">Contacto</router-link>
+			<router-link to="/home" class="menu-link">Inicio</router-link>
+			<router-link to="/about" class="menu-link">Sobre Mí</router-link>
+			<router-link to="/projects" class="menu-link">Proyectos</router-link>
+			<router-link to="/contact" class="menu-link">Contacto</router-link>
 		</nav>
 	</div>
 </template>
