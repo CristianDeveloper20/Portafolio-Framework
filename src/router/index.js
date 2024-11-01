@@ -6,7 +6,7 @@ import ContactView from '../views/ContactView.vue';
 
 const routes = [
   {
-    path: '/home',
+    path: '/portafolio-framework/home',
     name: 'home',
     component: PortfolioView,
     meta: {
@@ -15,7 +15,7 @@ const routes = [
     },
   },
   {
-    path: '/about',
+    path: '/portafolio-framework/about',
     name: 'about',
     component: AboutView,
     meta: {
@@ -24,7 +24,7 @@ const routes = [
     },
   },
   {
-    path: '/projects',
+    path: '/portafolio-framework/projects',
     name: 'projects',
     component: ProjectsView,
     meta: {
@@ -33,7 +33,7 @@ const routes = [
     },
   },
   {
-    path: '/contact',
+    path: '/portafolio-framework/contact',
     name: 'contact',
     component: ContactView,
     meta: {
