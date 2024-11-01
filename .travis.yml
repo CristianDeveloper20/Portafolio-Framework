@@ -18,11 +18,11 @@ before_deploy:
   - rm -rf dist  # Elimina la carpeta dist después de mover el contenido
 
 deploy:
-  provider: pages  # Cambia a pages para el despliegue en GitHub Pages
+  provider: git
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Usa el token de GitHub configurado en Travis CI
+  token: $GITHUB_TOKEN  # Usa el token de GitHub configurado en Travis CI
   keep-history: true
-  local-dir: .  # Usa el root del proyecto después de mover los archivos de dist
   on:
-    branch: main  # Solo se ejecuta en push a la rama main
-    condition: $TRAVIS_PULL_REQUEST = false  # Evita desplegar en PRs
+    push:
+      branches:
+        - main  # Solo se ejecuta en push a la rama main
