@@ -2,21 +2,21 @@
   <div id="app-container">
     <HeaderCore />
     <div class="content">
-      <transition @enter="enterAnimation" @leave="leaveAnimation" mode="out-in">
-        <router-view />
-      </transition>
+      <router-view v-slot="{ Component }">
+        <transition @enter="enterAnimation" @leave="leaveAnimation">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </div>
     <FooterCore />
   </div>
 </template>
-
 
 <script>
 import { defineComponent } from 'vue';
 import HeaderCore from './components/core/HeaderCore.vue';
 import FooterCore from './components/core/FooterCore.vue';
 import { gsap } from 'gsap';
-
 
 export default defineComponent({
   name: 'App',
@@ -47,14 +47,12 @@ export default defineComponent({
 });
 </script>
 
-
 <style scoped>
 #app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
 
 .content {
   flex: 1;
