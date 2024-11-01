@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import router from './route'; // Asegúrate de que el archivo y la ruta existen
+import router from './router'; // Asegúrate de que el archivo y la ruta existen
 import './style.css';
 
 // Configuración de Font Awesome (si se usa en el proyecto)
