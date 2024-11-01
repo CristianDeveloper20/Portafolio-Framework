@@ -5,7 +5,7 @@
 				alt="logo" />
 		</div>
 		<nav class="nav-menu">
-			<router-link to="/portafolio-framework/home" class="menu-link">Inicio</router-link>
+			<router-link to="/portafolio-framework/" class="menu-link">Inicio</router-link>
 			<router-link to="/portafolio-framework/about" class="menu-link">Sobre Mí</router-link>
 			<router-link to="/portafolio-framework/projects" class="menu-link">Proyectos</router-link>
 			<router-link to="/portafolio-framework/contact" class="menu-link">Contacto</router-link>

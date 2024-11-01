@@ -6,8 +6,8 @@ import ContactView from '../views/ContactView.vue';
 
 const routes = [
   {
-    path: '/portafolio-framework/home',
-    name: 'home',
+    path: '/portafolio-framework/',
+    name: 'portfolio',
     component: PortfolioView,
     meta: {
       allowsPublicAccess: true,
