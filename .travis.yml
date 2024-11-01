@@ -13,10 +13,10 @@ script:
   - npm run build
 
 before_deploy:
-  - touch dist/.nojekyll  # Evita problemas de GitHub Pages con archivos y carpetas
-  - mv dist/* .  # Mueve el contenido de dist a la raíz del proyecto
-  - mv dist/.* .  # Mueve archivos ocultos como .nojekyll a la raíz también
-  - rm -rf dist  # Elimina la carpeta dist después de mover el contenido
+  - touch dist/.nojekyll  # Crea el archivo .nojekyll para evitar problemas en GitHub Pages
+  - cp -r dist/* .  # Copia todos los archivos de dist a la raíz
+  - cp -r dist/.* . || true  # Copia también archivos ocultos como .nojekyll
+  - rm -rf dist  # Elimina la carpeta dist después de copiar el contenido
 
 deploy:
   provider: pages
