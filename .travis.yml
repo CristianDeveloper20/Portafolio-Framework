@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - "20.13.0"  # Cambia a la versión de Node.js que usas en tu proyecto
+
+# Solo ejecuta el build en la rama main cuando hay un push
+branches:
+  only:
+    - main
+
+install:
+  - npm install  # Instala las dependencias
+
+script:  
+  - npm run build  # Construye el proyecto (esto genera la carpeta dist)
+
+before_deploy:
+  - rm -rf .git  # Elimina la configuración git local en Travis para evitar conflictos
+  - mv dist/* .  # Mueve el contenido de dist al root del proyecto
+  - rm -rf dist  # Elimina la carpeta dist después de mover el contenido
+
+deploy:
+  provider: git
+  skip-cleanup: true
+  token: $GITHUB_TOKEN  # Usa el token de GitHub configurado en Travis CI
+  keep-history: true
+  on:
+    push:
+      branches:
+        - main  # Solo se ejecuta en push a la rama main
