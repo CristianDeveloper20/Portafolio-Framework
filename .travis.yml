@@ -1,28 +1,28 @@
 language: node_js
 node_js:
-  - "16"  # Cambia a la versión de Node.js que usas en tu proyecto
+  - "16"
 
-# Solo ejecuta el build en la rama main cuando hay un push
 branches:
   only:
     - main
 
 install:
-  - npm install  # Instala las dependencias
+  - npm install
 
 script:  
-  - npm run build  # Construye el proyecto (esto genera la carpeta dist)
+  - npm run build
 
 before_deploy:
-  - mv dist/* .  # Mueve el contenido de dist al root del proyecto
+  - touch dist/.nojekyll  # Evita problemas de GitHub Pages con archivos y carpetas
+  - mv dist/* .  # Mueve el contenido de dist a la raíz del proyecto
+  - mv dist/.* .  # Mueve archivos ocultos como .nojekyll a la raíz también
   - rm -rf dist  # Elimina la carpeta dist después de mover el contenido
 
 deploy:
-  provider: git
+  provider: pages
   skip-cleanup: true
-  token: $GITHUB_TOKEN  # Usa el token de GitHub configurado en Travis CI
+  github-token: $GITHUB_TOKEN  # Usa el token de GitHub configurado en Travis CI
   keep-history: true
+  local_dir: .  # Despliega desde la raíz donde ahora están los archivos
   on:
-    push:
-      branches:
-        - main  # Solo se ejecuta en push a la rama main
+    branch: main
