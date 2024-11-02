@@ -1,8 +1,7 @@
 <template>
 	<div class="header">
 		<div class="logo">
-			<img class="header-logo" src="/Foto perfil.jpeg" @click="goRedirectToHome"
-				alt="logo" />
+			<img class="header-logo" src="/Foto perfil.jpeg" @click="goRedirectToHome" alt="logo" />
 		</div>
 		<nav class="nav-menu">
 			<router-link to="/portafolio-framework/" class="menu-link">Inicio</router-link>
@@ -14,7 +13,7 @@
 </template>
 
 <script>
-import { defineComponent} from 'vue';
+import { defineComponent } from 'vue';
 import { gsap } from 'gsap';
 
 export default defineComponent({
@@ -25,7 +24,7 @@ export default defineComponent({
 		}
 	},
 	mounted() {
-		// Seleccionamos todos los enlaces de menú con la clase "menu-link"
+		// Animación de entrada para los enlaces de menú
 		gsap.from(".menu-link", {
 			opacity: 0,
 			y: -20,
@@ -43,7 +42,7 @@ export default defineComponent({
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px;
-	background-color: #333;
+	background-color: #1b1b1b;
 	color: white;
 
 	@media (max-width: 768px) {
@@ -56,18 +55,23 @@ export default defineComponent({
 .header-logo {
 	cursor: pointer;
 	width: 4cm;
-	height: 5cm;
+	height: 4cm;
 	object-fit: cover;
 	border-radius: 50%;
+	transition: transform 0.3s ease;
+
+	&:hover {
+		transform: scale(1.1);
+	}
 
 	@media (max-width: 768px) {
 		width: 3cm;
-		height: 4cm;
+		height: 3cm;
 	}
 
 	@media (max-width: 480px) {
 		width: 2.5cm;
-		height: 3cm;
+		height: 2.5cm;
 	}
 }
 
@@ -88,28 +92,29 @@ export default defineComponent({
 	font-size: 18px;
 	position: relative;
 	overflow: hidden;
-	padding: 0 5px;
+	padding: 5px;
+	transition: color 0.3s ease;
 
-	&::before {
+	&:hover {
+		color: #00c6ff;
+	}
+
+	&::after {
 		content: '';
 		position: absolute;
 		width: 100%;
 		height: 3px;
 		background: #00c6ff;
-		bottom: -3px;
+		bottom: 0;
 		left: 0;
 		transform: scaleX(0);
 		transform-origin: right;
 		transition: transform 0.3s ease;
 	}
 
-	&:hover::before {
+	&:hover::after {
 		transform: scaleX(1);
 		transform-origin: left;
-	}
-
-	&:hover {
-		color: #00c6ff;
 	}
 }
 </style>

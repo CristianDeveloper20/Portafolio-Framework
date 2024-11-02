@@ -24,6 +24,7 @@
 
 <script>
 import { defineComponent } from 'vue';
+import { gsap } from 'gsap';
 
 export default defineComponent({
     name: 'FooterCore',
@@ -31,7 +32,17 @@ export default defineComponent({
         goRedirectToHome() {
             this.$router.push('/');
         }
-    }
+    },
+    mounted() {
+		// Seleccionamos todos los enlaces de menú con la clase "menu-link"
+		gsap.from(".footer-column", {
+			opacity: 0,
+			y: -20,
+			duration: 0.8,
+			stagger: 0.2,
+			ease: "power3.out"
+		});
+	}
 });
 </script>
 
