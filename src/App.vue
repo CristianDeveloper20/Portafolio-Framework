@@ -58,4 +58,18 @@ export default defineComponent({
   flex: 1;
   padding: 20px;
 }
+
+@media (max-width: 768px) {
+  /* Ajuste del padding para pantallas de tamaño mediano */
+  .content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajuste del padding para dispositivos móviles */
+  .content {
+    padding: 5px;
+  }
+}
 </style>
