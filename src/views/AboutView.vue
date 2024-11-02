@@ -194,5 +194,49 @@ export default {
             }
         }
     }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+        .about-title {
+            font-size: 2em;
+        }
+
+        .about-description {
+            font-size: 1em;
+        }
+
+        .skills-title {
+            font-size: 1.5em;
+        }
+
+        .skill-category h3 {
+            font-size: 1.2em;
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 20px;
+
+        .about-title {
+            font-size: 1.8em;
+        }
+
+        .about-description {
+            font-size: 0.9em;
+            padding: 0 10px;
+        }
+
+        .skills-title {
+            font-size: 1.3em;
+        }
+
+        .skill-category h3 {
+            font-size: 1em;
+        }
+
+        .skill-category p {
+            gap: 5px;
+        }
+    }
 }
 </style>

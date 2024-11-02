@@ -96,5 +96,43 @@ export default {
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
     }
+
+    /* Responsivo para tablets */
+    @media (max-width: 768px) {
+        .projects-title {
+            font-size: 2em;
+        }
+
+        .project-card {
+            padding: 15px;
+
+            .project-name {
+                font-size: 1.3em;
+            }
+
+            .project-details {
+                font-size: 0.9em;
+            }
+        }
+    }
+
+    /* Responsivo para dispositivos móviles */
+    @media (max-width: 480px) {
+        .projects-title {
+            font-size: 1.8em;
+        }
+
+        .project-card {
+            padding: 10px;
+
+            .project-name {
+                font-size: 1.2em;
+            }
+
+            .project-details {
+                font-size: 0.85em;
+            }
+        }
+    }
 }
 </style>

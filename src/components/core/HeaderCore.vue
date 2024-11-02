@@ -3,6 +3,9 @@
 		<div class="logo">
 			<img class="header-logo" src="/Foto perfil.jpeg" @click="goRedirectToHome" alt="logo" />
 		</div>
+		<div>
+			<p class="header-title">Cristian Fernando Cruz Usme</p>
+		</div>
 		<nav class="nav-menu">
 			<router-link to="/portafolio-framework/" class="menu-link">Inicio</router-link>
 			<router-link to="/portafolio-framework/about" class="menu-link">Sobre Mí</router-link>
@@ -32,6 +35,18 @@ export default defineComponent({
 			stagger: 0.2,
 			ease: "power3.out"
 		});
+		gsap.from(".header-logo", {
+			opacity: 0,
+			y: -20,
+			duration: 0.8,
+			ease: "power3.out"
+		});
+		gsap.from(".header-title", {
+			opacity: 0,
+			y: -20,
+			duration: 0.8,
+			ease: "power3.out"
+		});
 	}
 });
 </script>
@@ -50,6 +65,11 @@ export default defineComponent({
 		text-align: center;
 		padding: 10px;
 	}
+}
+
+.header-title {
+	font-size: 1.5em;
+	margin: 0;
 }
 
 .header-logo {

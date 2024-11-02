@@ -75,5 +75,38 @@ export default {
             }
         }
     }
+
+    /* Responsivo para tablets */
+    @media (max-width: 768px) {
+        .contact-title {
+            font-size: 2em;
+        }
+
+        .contact-description {
+            font-size: 1em;
+            padding: 0 10px;
+        }
+
+        .social-link {
+            font-size: 1.8em;
+            gap: 20px;
+        }
+    }
+
+    /* Responsivo para dispositivos móviles */
+    @media (max-width: 480px) {
+        .contact-title {
+            font-size: 1.8em;
+        }
+
+        .contact-description {
+            font-size: 0.9em;
+        }
+
+        .social-link {
+            font-size: 1.5em;
+            gap: 15px;
+        }
+    }
 }
 </style>
